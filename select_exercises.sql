@@ -20,7 +20,7 @@ SELECT 'These albums had less than 25 million sales' AS 'Info';
 
 SELECT name FROM albums WHERE sales <= 25;
 
-SELECT 'These are the rock albums' AS 'Info';
+SELECT 'These are the hard rock albums' AS 'Info';
 
-SELECT name FROM albums WHERE genre = 'Rock';
+SELECT name FROM albums WHERE genre = 'Hard Rock';
 
