@@ -14,7 +14,7 @@ SELECT genre FROM albums WHERE name = 'Bat Out of Hell';
 
 SELECT 'These albums were released in the 90s' AS 'Info';
 
-SELECT name FROM albums WHERE release_date > 1989;
+SELECT name FROM albums WHERE release_date BETWEEN 1990 AND 1999;
 
 SELECT 'These albums had less than 25 million sales' AS 'Info';
 
