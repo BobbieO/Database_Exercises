@@ -7,17 +7,17 @@ WHERE gender = 'M'
 ORDER BY last_name ASC, first_name;
 
 
-SELECT last_name
+SELECT last_name, emp_no
 FROM employees
 WHERE last_name LIKE 'E%'
     OR last_name LIKE '%E'
-ORDER BY emp_no; 
+ORDER BY emp_no DESC; 
 
-SELECT last_name
+SELECT last_name, emp_no
 FROM employees
 WHERE last_name LIKE 'E%'
     AND last_name LIKE '%E'
-ORDER BY emp_no;
+ORDER BY emp_no DESC;
 
 SELECT emp_no, first_name, last_name
 FROM employees
