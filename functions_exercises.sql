@@ -22,5 +22,5 @@ SELECT COUNT(DISTINCT last_name, first_name), last_name, first_name
 FROM employees
 WHERE last_name LIKE '%q%'
     AND last_name NOT LIKE '%qu%'
-GROUP BY last_name
+GROUP BY last_name, first_name
 ORDER BY COUNT(DISTINCT last_name, first_name);
