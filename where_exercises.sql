@@ -23,7 +23,8 @@ WHERE last_name LIKE 'E%'
 
 SELECT emp_no, first_name, last_name
 FROM employees
-WHERE birth_date LIKE '%-12-25';
+WHERE birth_date LIKE '%-12-25'
+    AND hire_date LIKE '199%-%-%';
 
 SELECT first_name, last_name
 FROM employees
