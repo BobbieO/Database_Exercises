@@ -12,7 +12,7 @@ WHERE last_name LIKE 'E%'
 ORDER BY last_name ASC;
 
 
-SELECT emp_no, first_name, last_name
+SELECT first_name, last_name, DATEDIFF(NOW(), hire_date )
 FROM employees
 WHERE (birth_date LIKE '%-12-25'
     AND hire_date LIKE '199%-%-%')
