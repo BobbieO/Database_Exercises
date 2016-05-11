@@ -7,7 +7,7 @@ JOIN departments
 WHERE dept_manager.to_date = '9999-01-01';
 
 
-SELECT departments.dept_name, CONCAT(employees.first_name, ' ', employees.last_name) AS full_name
+SELECT departments.dept_name AS 'Department Name', CONCAT(employees.first_name, ' ', employees.last_name) AS 'Department Manager'
 FROM employees
 JOIN dept_manager
   ON dept_manager.emp_no = employees.emp_no
@@ -15,7 +15,7 @@ JOIN departments
   ON departments.dept_no = dept_manager.dept_no
 WHERE dept_manager.to_date = '9999-01-01';
 
-SELECT departments.dept_name, CONCAT(employees.first_name, ' ', employees.last_name) AS full_name
+SELECT departments.dept_name AS 'Department Name', CONCAT(employees.first_name, ' ', employees.last_name) AS 'Manager Name'
 FROM employees
 JOIN dept_manager
   ON dept_manager.emp_no = employees.emp_no
@@ -25,7 +25,7 @@ WHERE dept_manager.to_date = '9999-01-01'
     AND gender = 'F';
 
 
-SELECT title, COUNT(*)
+SELECT title AS Title, COUNT(*) AS Count
 FROM titles
 JOIN dept_emp
   ON dept_emp.emp_no = titles.emp_no
@@ -35,7 +35,7 @@ WHERE titles.to_date = '9999-01-01'
     AND dept_name = 'Customer Service'
 GROUP BY title;
 
-SELECT dept_name, CONCAT(first_name, ' ', last_name) AS full_name, salary
+SELECT dept_name AS 'Department Name', CONCAT(first_name, ' ', last_name) AS 'Name', salary AS 'Salary'
 FROM employees
 JOIN dept_manager
     ON dept_manager.emp_no = employees.emp_no
@@ -46,7 +46,7 @@ JOIN salaries
 WHERE salaries.to_date = '9999-01-01'
     AND dept_manager.to_date = '9999-01-01';
 
-SELECT CONCAT(worker.first_name, ' ', worker.last_name), dept_name, CONCAT(manager.first_name, ' ', manager.last_name)
+SELECT CONCAT(worker.first_name, ' ', worker.last_name) AS 'Employee Name', dept_name AS 'Department Name', CONCAT(manager.first_name, ' ', manager.last_name) AS 'Manager Name'
 FROM employees AS worker
 JOIN dept_emp
     ON worker.emp_no = dept_emp.emp_no      
@@ -57,7 +57,7 @@ JOIN dept_manager
 JOIN employees AS manager
     ON manager.emp_no = dept_manager.emp_no
 WHERE dept_manager.to_date = '9999-01-01'
-    AND dept_emp.to_date = '9999-01-01';   
+    AND dept_emp.to_date = '9999-01-01';  
 
 
 
